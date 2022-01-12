@@ -1,0 +1,70 @@
+{
+  "root": "apps/aman",
+  "sourceRoot": "apps/aman/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "compiler": "babel",
+        "outputPath": "dist/apps/aman",
+        "index": "apps/aman/src/index.html",
+        "baseHref": "/",
+        "main": "apps/aman/src/main.tsx",
+        "polyfills": "apps/aman/src/polyfills.ts",
+        "tsConfig": "apps/aman/tsconfig.app.json",
+        "assets": ["apps/aman/src/favicon.ico", "apps/aman/src/assets"],
+        "styles": ["apps/aman/src/styles.css"],
+        "scripts": [],
+        "webpackConfig": "@nrwl/react/plugins/webpack"
+      },
+      "configurations": {
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/aman/src/environments/environment.ts",
+              "with": "apps/aman/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/web:dev-server",
+      "options": {
+        "buildTarget": "aman:build",
+        "hmr": true
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "aman:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/aman/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/aman"],
+      "options": {
+        "jestConfig": "apps/aman/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
