@@ -19,6 +19,9 @@
     "@nrwl/tao": "13.4.4",
     "@nrwl/web": "13.4.4",
     "@nrwl/workspace": "13.4.4",
+    "@swc/cli": "~0.1.52",
+    "@swc/core": "1.2.118",
+    "@swc/helpers": "~0.2.14",
     "@testing-library/react": "12.1.2",
     "@testing-library/react-hooks": "7.0.2",
     "@types/jest": "27.0.2",
@@ -27,6 +30,7 @@
     "@types/react-dom": "17.0.9",
     "@typescript-eslint/eslint-plugin": "~5.3.0",
     "@typescript-eslint/parser": "~5.3.0",
+    "babel-jest": "27.2.3",
     "cypress": "^9.1.0",
     "eslint": "8.2.0",
     "eslint-config-prettier": "8.1.0",
@@ -42,10 +46,21 @@
     "typescript": "~4.4.3"
   },
   "dependencies": {
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
+    "@mui/icons-material": "^5.2.5",
+    "@mui/material": "^5.2.8",
+    "@mui/styled-engine-sc": "^5.1.0",
     "core-js": "^3.6.5",
+    "notistack": "^2.0.3",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "react-redux": "^7.2.6",
+    "redux": "^4.1.2",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-thunk": "^2.4.1",
     "regenerator-runtime": "0.13.7",
+    "styled-components": "^5.3.3",
     "tslib": "^2.0.0"
   }
 }

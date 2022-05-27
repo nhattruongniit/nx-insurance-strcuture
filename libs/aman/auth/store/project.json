@@ -1,0 +1,43 @@
+{
+  "root": "libs/aman/auth/store",
+  "sourceRoot": "libs/aman/auth/store/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:rollup",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/aman/auth/store",
+        "tsConfig": "libs/aman/auth/store/tsconfig.lib.json",
+        "project": "libs/aman/auth/store/package.json",
+        "entryFile": "libs/aman/auth/store/src/index.ts",
+        "external": ["react/jsx-runtime"],
+        "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+        "compiler": "babel",
+        "assets": [
+          {
+            "glob": "libs/aman/auth/store/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/aman/auth/store/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/aman/auth/store"],
+      "options": {
+        "jestConfig": "libs/aman/auth/store/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

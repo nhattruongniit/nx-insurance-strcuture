@@ -1,0 +1,23 @@
+{
+  "root": "libs/design-system/table",
+  "sourceRoot": "libs/design-system/table/src",
+  "projectType": "library",
+  "tags": ["scope:design-system"],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/design-system/table/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/design-system/table"],
+      "options": {
+        "jestConfig": "libs/design-system/table/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

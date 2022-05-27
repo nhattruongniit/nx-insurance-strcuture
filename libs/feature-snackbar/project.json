@@ -1,0 +1,23 @@
+{
+  "root": "libs/feature-snackbar",
+  "sourceRoot": "libs/feature-snackbar/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/feature-snackbar/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/feature-snackbar"],
+      "options": {
+        "jestConfig": "libs/feature-snackbar/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

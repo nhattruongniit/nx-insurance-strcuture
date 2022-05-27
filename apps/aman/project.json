@@ -34,6 +34,34 @@
           "namedChunks": false,
           "extractLicenses": true,
           "vendorChunk": false
+        },
+        "staging": {
+          "fileReplacements": [
+            {
+              "replace": "apps/aman/src/environments/environment.ts",
+              "with": "apps/aman/src/environments/environment.stag.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false
+        },
+        "local": {
+          "fileReplacements": [
+            {
+              "replace": "apps/aman/src/environments/environment.ts",
+              "with": "apps/aman/src/environments/environment.local.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false
         }
       }
     },
@@ -66,5 +94,5 @@
       }
     }
   },
-  "tags": []
+  "tags": ["scope:aman", "type:app"]
 }

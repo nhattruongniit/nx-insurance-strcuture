@@ -3,4 +3,5 @@
 
 export const environment = {
   production: false,
+  ENDPOINT: 'locahost:200/api',
 };

@@ -2,6 +2,13 @@
   "version": 2,
   "projects": {
     "aman": "apps/aman",
-    "aman-e2e": "apps/aman-e2e"
+    "aman-auth-feature": "libs/aman/auth/feature",
+    "aman-auth-store": "libs/aman/auth/store",
+    "aman-e2e": "apps/aman-e2e",
+    "aman-store": "libs/aman/store",
+    "design-system-button": "libs/design-system/button",
+    "design-system-snackbar": "libs/design-system/snackbar",
+    "design-system-table": "libs/design-system/table",
+    "feature-snackbar": "libs/feature-snackbar"
   }
 }

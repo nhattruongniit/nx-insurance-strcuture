@@ -14,7 +14,27 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@nx-insurance-structure/aman-store": ["libs/aman/store/src/index.ts"],
+      "@nx-insurance-structure/aman/auth/feature": [
+        "libs/aman/auth/feature/src/index.ts"
+      ],
+      "@nx-insurance-structure/aman/auth/store": [
+        "libs/aman/auth/store/src/index.ts"
+      ],
+      "@nx-insurance-structure/design-system-table": [
+        "libs/design-system/table/src/index.ts"
+      ],
+      "@nx-insurance-structure/design-system/button": [
+        "libs/design-system/button/src/index.ts"
+      ],
+      "@nx-insurance-structure/design-system/snackbar": [
+        "libs/design-system/snackbar/src/index.ts"
+      ],
+      "@nx-insurance-structure/feature-snackbar": [
+        "libs/feature-snackbar/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

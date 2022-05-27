@@ -1,0 +1,23 @@
+{
+  "root": "libs/design-system/button",
+  "sourceRoot": "libs/design-system/button/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/design-system/button/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/design-system/button"],
+      "options": {
+        "jestConfig": "libs/design-system/button/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}
